@@ -27,7 +27,7 @@ Class.forName(driverName);
             String mydatabase ="dados_abertos";        //nome do seu banco de dados
             String url = "jdbc:postgresql://" + serverName + "/" + mydatabase;
             String username = "postgres";        //nome de um usuário de seu BD      
-            String password = "admin";      //sua senha de acesso
+            String password = "postgres";      //sua senha de acesso
 
             con = DriverManager.getConnection(url, username, password);
             //Testa sua conexão//  

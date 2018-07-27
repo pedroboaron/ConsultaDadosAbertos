@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 
 class LeitorXMLTest {
 
-	@Test
-	public void carregaXmlComUmNegocioEmListaUnitaria() {
+//	@Test
+	public static void carregaXmlComUmNegocioEmListaUnitaria() {
 		String xmlDeTeste = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
 				"\r\n" + 
 				"<orgao nome=\"Câmara dos Deputados\">\r\n" + 
@@ -42,12 +42,15 @@ class LeitorXMLTest {
 				"      <nuDeputadoId>3074</nuDeputadoId>\r\n" + 
 				"      <ideDocumento>6266962</ideDocumento>\r\n" + 
 				"    </DESPESA>\r\n" + 
-				"    <DESPESA>\r\n"+
 				"  </DESPESAS>\r\n"+
 				"</orgao>";
 				
 	  LeitorXML leitor = new LeitorXML();
 	  List<Negocio> negocios = leitor.carrega(new StringReader(xmlDeTeste));
 	  System.out.println(negocios);
+	}
+	public static void main(String[] args) {
+		carregaXmlComUmNegocioEmListaUnitaria();
+		
 	}
 }
